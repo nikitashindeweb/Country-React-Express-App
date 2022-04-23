@@ -1,10 +1,13 @@
-# Getting Started with Create React App
+# Getting Started with Country React / Express App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Available Scripts for React
 
-In the project directory, you can run:
+In the `app` directory, you can run:
+
+### `npm i install`
+
+Install node dependancies 
 
 ### `npm start`
 
@@ -13,11 +16,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -29,42 +27,39 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Available Scripts for Express
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `npm i install`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install node dependancies 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `npm run devstart`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Runs the app in the development mode.\
+Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
 
-## Learn More
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Task
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Create an Express App which listens on port 8080
+2. Create a get API /countries which will provide list of countries [Only name and Id]
+available in the data file
+3. Create a get API ​/country/{country-id}​ which will return information of that country
+based on country id.
+4. Create a post API ​/country​ which will accept Country Object and save the details to the
+data file and the image to the ​/images​ directory.
+Frontend
+5. Create a UI
+	a. Which shows a dropdown of the current list of countries on load
+	b. Changing the value in the drop down should display the details of the current selected country. (Name, Image, Rank)
+	c. User should be able to add a new country Name [Validation - Min 3 chars and Max 20]
+	d. County Image - Only accept Jpg and Png and Max 4 MB
+	e. Continent should be selected from dropdown having unique values from the data
+file
+	f. Rank should accept only numeric values.
+	g. Once successful post, user should be able to see all the updated list of countries
+from data file without page refresh
+	h. For server side validation. Country Name and Rank must be unique. Highlight
+Error fields with Red Border after POST response if any.
